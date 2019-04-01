@@ -40,7 +40,7 @@ console.log(result);
 */
 //================================
 //Comparison Operators in JavaScript
-            
+ /*           
  if (1 == 1){
 	 console.log("Yo!")
  }
@@ -53,6 +53,7 @@ console.log(result);
 // === same value and data type
 // <= less than or equal to
 // >= greater than or equal to
+// !== not equal to
 
 var val1 = 23;
 var val2 = "23";
@@ -62,6 +63,43 @@ if (val1 === val2){
 }else{
 	console.log("One of these is not like the other....");
 }
+*/
+//================================
+//Logical Operators in JavaScript
+
+if (1 == 1 && 2 == 2 || "Joe" == "Joe"){
+	console.log("These are both true");
+}
+
+if (true && true){
+	console.log("These are the same");
+}
+
+if (true && false){
+	console.log("These are the same");
+}
+
+
+if (1 == 3 || "Joe" == "Joe"){
+	console.log("One of these is true");
+}
+
+var cat1 = 5;
+var cat2 = 10;
+var cat3 = 1;
+var cat3DisabledHandicap = true;
+
+if(cat1 > cat2 && cat1 > cat3 && !cat3DisabledHandicap){
+	console.log("Cat1 is the cutest!");
+}else if (cat2 > cat1 && cat2 > cat3 && !cat3DisabledHandicap){
+	console.log("Cat2 is the cutest!");
+}else if (cat3 > cat1 && cat3 > cat2 || cat3DisabledHandicap){
+	console.log("Cat3 is the cutest!");
+}
+
+
+
+
 
 
  
