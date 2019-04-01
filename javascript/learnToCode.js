@@ -132,14 +132,68 @@ for (var i=0; i< total; i++){
 }
 */
 
+/*
 var students = ["John", "Jacob", "Jingle", "Heimer", "Smith"];
 
 for (var i=0; i< students.length; i++){
 	console.log(students[i]);
 }
+*/
 
 //================================
 //JavaScript Functions
+
+/*
+var length1 = 15;
+var width1 = 10;
+var area1 = length1 * width1;
+
+console.log(area1);
+
+var length2 = 12;
+var width2 = 14;
+var area2 = length2 * width2;
+
+console.log(area2);
+*/
+
+//make a function 
+function areaFunc(length, width){
+	return length * width;
+}
+
+//call function
+var area1 = areaFunc(10, 15);
+console.log(area1);
+
+var rectanglesAreas = [];
+rectanglesAreas.push(areaFunc(10, 15));
+rectanglesAreas.push(areaFunc(14, 2));
+rectanglesAreas.push(areaFunc(4, 5));
+
+
+console.log(rectanglesAreas);
+
+//---
+
+var bankBalance = 500;
+
+function makeTransaction(priceOfSale){
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
