@@ -18,7 +18,7 @@ console.log(loginWelcomeMessage);
 */
 
 //================================
-
+/*
 //Numbers in JavaScript
 
 //all numbers are floating point (whether decimal point is shown or not)
@@ -37,8 +37,31 @@ var result = 10 * ((5 + 3) - 4) //order of operations in parenthesis
 
 
 console.log(result);
-
+*/
 //================================
 //Comparison Operators in JavaScript
             
-       
+ if (1 == 1){
+	 console.log("Yo!")
+ }
+ 
+ var myAccountBalance= 300;
+ var nikeShoes = 799.23;
+ var coupon = 500;
+ 
+// == equal value
+// === same value and data type
+// <= less than or equal to
+// >= greater than or equal to
+
+var val1 = 23;
+var val2 = "23";
+
+if (val1 === val2){
+	console.log("These are the same!");
+}else{
+	console.log("One of these is not like the other....");
+}
+
+
+ 
