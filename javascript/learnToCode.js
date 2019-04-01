@@ -99,7 +99,7 @@ if(cat1 > cat2 && cat1 > cat3 && !cat3DisabledHandicap){
 */
 //================================
 //JavaScript Arrays
-
+/*
 var studentNames = ["Timmy", "Janessa", "Arun"];
 
 var naughtyList = [];
@@ -119,9 +119,51 @@ console.log(naughtyList);
 
 var person = ["John", 23, true] //can accept mixed data types. NOT RECOMMENDED!! 
 
-
+*/
 //================================
 //JavaScript Loops
+
+
+/*
+var total = 10;
+
+for (var i=0; i< total; i++){
+	console.log(i);
+}
+*/
+
+var students = ["John", "Jacob", "Jingle", "Heimer", "Smith"];
+
+for (var i=0; i< students.length; i++){
+	console.log(students[i]);
+}
+
+//================================
+//JavaScript Functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
