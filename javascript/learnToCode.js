@@ -66,7 +66,7 @@ if (val1 === val2){
 */
 //================================
 //Logical Operators in JavaScript
-
+/*
 if (1 == 1 && 2 == 2 || "Joe" == "Joe"){
 	console.log("These are both true");
 }
@@ -96,6 +96,51 @@ if(cat1 > cat2 && cat1 > cat3 && !cat3DisabledHandicap){
 }else if (cat3 > cat1 && cat3 > cat2 || cat3DisabledHandicap){
 	console.log("Cat3 is the cutest!");
 }
+*/
+//================================
+//JavaScript Arrays
+
+var studentNames = ["Timmy", "Janessa", "Arun"];
+
+var naughtyList = [];
+
+naughtyList.push(students[0]); //add to array
+
+console.log(naughtyList);
+
+var index = naughtyList.indexOf("Timmy"); //returns the index of "Timmy", OR -1 if not found
+
+if (index > -1){
+	naughtyList.splice(index, 1); //splice the array at the index, and remove 1 element ("Timmy"). ++++++++
+}
+
+console.log(naughtyList);
+
+
+var person = ["John", 23, true] //can accept mixed data types. NOT RECOMMENDED!! 
+
+
+//================================
+//JavaScript Loops
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
