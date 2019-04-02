@@ -179,24 +179,60 @@ console.log(rectanglesAreas);
 var bankBalance = 500;
 
 function makeTransaction(priceOfSale){
+	if (priceOfSale <= bankBalance){
+		bankBalance -= priceOfSale;
+		console.log("Purchase Successful");
+	}else{
+		console.log("Insufficient Funds");
+	}
 	
 }
 
+console.log(bankBalance);
+makeTransaction(79.00);
+console.log(bankBalance);
+makeTransaction(2.32);
+console.log(bankBalance);
+makeTransaction(10.45);
+console.log(bankBalance);
+makeTransaction(450.00);
 
 
+//Storing a function in a variable (anonymous function)+++++++++++++++++++++++++++++++++++
+//allows function to be stored in an array for example
+var transaction = function(priceOfSale){
+	if (priceOfSale <= bankBalance){
+		bankBalance -= priceOfSale;
+		console.log("Purchase Successful");
+	}else{
+		console.log("Insufficient Funds");
+	}
+	
+}
+
+transaction(10);
 
 
+var printCustomerName = function(first, last){
+	console.log("First Name: " + first + " Last Name: " + last);
+}
 
 
+var applyForcredit= function(creditScore, soul){
+	//call some functions to process application
+}
 
 
+//array to hold all of above functions:
+var bankOpperations = [];
 
+//store functions in array:
+bankOpperations.push(transaction);
+bankOpperations.push(printCustomerName);
+bankOpperations.push(applyForcredit);
 
-
-
-
-
-
+//================================
+//JavaScript Objects
 
 
 
