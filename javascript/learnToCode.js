@@ -222,11 +222,11 @@ bankOpperations.push(applyForcredit);
 */
 
 //================================
-//JavaScript Objects
+//JavaScript Objects //++++++++++++++++++++++++++++++++
 
 //Objects are like 'Hash tables', containing 'keys' and 'values'.
 
-
+/*
 //create an object, way 1 
 //This is a 'literal' object, as it has data in during creation
 var student0 = {
@@ -240,6 +240,7 @@ var student0 = {
 
 
 console.log(student0.greeting()); //calling function within object
+*/
 
 /*
 //print values:
@@ -275,6 +276,9 @@ for (var i=0; i<students.length;i++){
 	console.log(students[i]);
 }
 */
+
+
+/*
 
 //a function for creating objects: //++++++++++++++++++++++++++++
 function Student(first, last, age){
@@ -320,9 +324,42 @@ for (var key in studentTest){ //go through each key in student
 }
 
 //==
-
+*/
 //================================
-//JavaScript Bind
+//JavaScript Bind //++++++++++++++++++++++++++++++++
+
+
+this.car = "Honda Civic with ugly spoiler";
+
+var marksGarage = {
+	car: "Aston Martin",
+	getCar: function(){
+		return this.car;
+	}
+};
+
+
+console.log(marksGarage.getCar());
+console.log(car);
+
+//store getCar function
+var storeGetCarForLater = marksGarage.getCar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
