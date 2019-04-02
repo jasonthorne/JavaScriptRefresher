@@ -304,15 +304,25 @@ students.push(new Student("Carl", "Jr", 4));
 
 
 for (var i=0; i<students.length;i++){
-	var student = students[i]; //temp var
+	var student = students[i]; //temp var to grab student
 	console.log(student.greeting());
 }
 
 
+//==
+
+var studentTest = students[0];
 
 
+//'for in' loop:
+for (var key in studentTest){ //go through each key in student
+	console.log(studentTest[key]); //print the key values
+}
 
+//==
 
+//================================
+//JavaScript Bind
 
 
 
