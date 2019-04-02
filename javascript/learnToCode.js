@@ -144,18 +144,6 @@ for (var i=0; i< students.length; i++){
 //JavaScript Functions
 
 /*
-var length1 = 15;
-var width1 = 10;
-var area1 = length1 * width1;
-
-console.log(area1);
-
-var length2 = 12;
-var width2 = 14;
-var area2 = length2 * width2;
-
-console.log(area2);
-*/
 
 //make a function 
 function areaFunc(length, width){
@@ -231,30 +219,59 @@ bankOpperations.push(transaction);
 bankOpperations.push(printCustomerName);
 bankOpperations.push(applyForcredit);
 
+*/
+
 //================================
 //JavaScript Objects
 
+//Objects are like 'Hash tables', containing 'keys' and 'values'.
 
 
+//create an object, way 1
+var student0 = {
+	firstName: "Mary", //a 'property' with a 'key' and 'value'
+	lastName: "Sue",
+	age: 8,
+	greeting: function(){ //a function inside an object
+		return "Hi, I'm " + this.firstName + " and I'm " + this.age + " years old."; //'this' refers to the properties inside the object (global object scope, not local function scope). 
+	}
+}; //Dont forget colon!! :P
 
 
+/*
+//print values:
+console.log(student.firstName); //'dot syntax' grabs the keyname, which returns the value
+console.log(student.lastName);
 
 
+//another way of printing:
+console.log(student["firstName"]); //accessing by the name of the key.
+console.log(student["lastName"]);
+*/
 
 
+//create an object, way 2
+var student1 = new Object(); //creates a new empty object
+student1.firstName = "John"; //add values
+student1.lastName = "Parker";
+student1.age = 7;
+
+//create an object, way 3
+var student2 = {};
+student2.firstName = "Zack";
+student2.lastName = "Bobo";
+student2.age = 5;
 
 
+//add student objects to array:
+var students = [];
+students.push(student0);
+students.push(student1);
+students.push(student2);
 
-
-
-
-
-
-
-
-
-
-
+for (var i=0; i<students.length;i++){
+	console.log(students[i]);
+}
 
 
 
