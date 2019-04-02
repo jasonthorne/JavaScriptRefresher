@@ -227,7 +227,8 @@ bankOpperations.push(applyForcredit);
 //Objects are like 'Hash tables', containing 'keys' and 'values'.
 
 
-//create an object, way 1
+//create an object, way 1 
+//This is a 'literal' object, as it has data in during creation
 var student0 = {
 	firstName: "Mary", //a 'property' with a 'key' and 'value'
 	lastName: "Sue",
@@ -238,18 +239,19 @@ var student0 = {
 }; //Dont forget colon!! :P
 
 
+console.log(student0.greeting()); //calling function within object
+
 /*
 //print values:
 console.log(student.firstName); //'dot syntax' grabs the keyname, which returns the value
 console.log(student.lastName);
-
 
 //another way of printing:
 console.log(student["firstName"]); //accessing by the name of the key.
 console.log(student["lastName"]);
 */
 
-
+/*
 //create an object, way 2
 var student1 = new Object(); //creates a new empty object
 student1.firstName = "John"; //add values
@@ -272,21 +274,39 @@ students.push(student2);
 for (var i=0; i<students.length;i++){
 	console.log(students[i]);
 }
+*/
+
+//a function for creating objects: //++++++++++++++++++++++++++++
+function Student(first, last, age){
+	
+	this.firstName = first; //creating keys ('this.keyname') and assigning values to them during creation 
+	this.lastName = last;
+	this.age = age;
+	this.greeting = function(){ //a function inside an object
+		return "Hi, I'm " + this.firstName + " and I'm " + this.age + " years old."; //'this' refers to the properties inside the object (global object scope, not local function scope). 
+	}
+	
+}
+
+var students = [];
+
+//==
+//var s1 = new Student("Jenny", "Laga", 5);
+//console.log(s1);
+//console.log(s1.greeting());
+//==
 
 
+//create Student objs and push to array.
+students.push(new Student("Jenny", "Laga", 5));
+students.push(new Student("Timmy", "Turner", 8));
+students.push(new Student("Carl", "Jr", 4));
 
 
-
-
-
-
-
-
-
-
-
-
-
+for (var i=0; i<students.length;i++){
+	var student = students[i]; //temp var
+	console.log(student.greeting());
+}
 
 
 
