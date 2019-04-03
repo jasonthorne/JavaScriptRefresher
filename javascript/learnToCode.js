@@ -329,32 +329,40 @@ for (var key in studentTest){ //go through each key in student
 //JavaScript Bind //++++++++++++++++++++++++++++++++
 
 
-this.car = "Honda Civic with ugly spoiler";
+this.car = "Honda Civic with ugly spoiler"; //'this' in this case refers to the main script file
 
 var marksGarage = {
 	car: "Aston Martin",
 	getCar: function(){
-		return this.car;
+		return this.car; //'this' here is scoped within this function
 	}
 };
 
 
 console.log(marksGarage.getCar());
-console.log(car);
+//console.log(car);
 
-//store getCar function
-var storeGetCarForLater = marksGarage.getCar;
+//store getCar function in variable.
+//storing the function here, changes the scope of 'this' to refer to the outer 'this' ++++++++++++
+var storeGetCarForLater = marksGarage.getCar; 
+
+//call stored function:
+console.log(storeGetCarForLater());
+
+//BINDING: 
+
+//One way of binding object to function:
+//var theRealGetCarFunction = storeGetCarForLater.bind(marksGarage); 
+
+//Another way of binding object to function:
+var theRealGetCarFunction = marksGarage.getCar.bind(marksGarage); //the bind function allows you to define the scope of your function ('marksGarage' in this instance)
+
+//call the function var with the bound function:
+console.log(theRealGetCarFunction());
 
 
-
-
-
-
-
-
-
-
-
+//================================
+//Percentage Calculator //++++++++++++++++++++++++++++++++
 
 
 
