@@ -362,7 +362,7 @@ console.log(theRealGetCarFunction());
 
 
 //================================
-//Percentage Calculator //++++++++++++++++++++++++++++++++
+
 
 
 
