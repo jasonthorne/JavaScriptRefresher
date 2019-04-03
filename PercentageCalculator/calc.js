@@ -11,8 +11,10 @@ resultField.innerText = "test"; //'innerText' for text
 //create a form var:
 var form = document.getElementById('xIsWhatPercentOfY'); 
 
-//add a 'submit' event listener to the form (for our button (of type 'submit') which is inside the form):
-form.addEventListener('submit', function(){
+//add a 'submit' event listener to the form (for our button (of type 'submit') which is inside the form).
+//IMPORTANT: form submissions refresh pages by default and wipe all data from it. SO we add an event parameter to our function +++++++++++++++++++++++++++++++++++++
+//(the 'submit' event, which is then passed into our function), and call the '.preventDefault' to stop that! +++++++++++++++++++++++++++++++++++++
+form.addEventListener('submit', function(event){
 	//anonymous in-line function thats called when event is triggered:
 	
 	
@@ -21,13 +23,18 @@ form.addEventListener('submit', function(){
 		alert("Please enter values in the fields");
 	}else{
 		var x = parseFloat(numField1.value); //convert string to float
-		var y =  parseFloat(numField2.value); //convert string to float
+		var y = parseFloat(numField2.value); //convert string to float
 		
-		alert(x + y);
+		var result = x / y; //find x/y in decimal
+		var percent = result * 100; //find percentage
+		
+		//alert(percent);
+		
+		//show answer to user:
+		resultField.innerText = "Answer: " + percent + "%";
+		
+		//prevent the form from default refreshing and wiping data: +++++++++++++++++++++
+		event.preventDefault();
 	}
-	
-	
-	console.log(x);
-	console.log(y);
 	
 });
