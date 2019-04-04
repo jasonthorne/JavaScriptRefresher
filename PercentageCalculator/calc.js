@@ -28,8 +28,6 @@ form.addEventListener('submit', function(event){
 		var result = x / y; //find x/y in decimal
 		var percent = result * 100; //find percentage
 		
-		//alert(percent);
-		
 		//show answer to user:
 		resultField.innerText = "Answer: " + percent + "%";
 		
